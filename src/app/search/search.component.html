@@ -1,0 +1,15 @@
+<mat-form-field>
+    <mat-select placeholder="Select Survey" [(ngModel)]="data" (ngModelChange)="dataChanged($event)" name="data">
+
+      <mat-option value="all">All</mat-option>
+      <mat-option value="{{item._id}}" *ngFor="let item of allusers">
+        <!-- <ng-container > -->
+
+        {{ item.title }}
+        <!-- </ng-container > -->
+
+      </mat-option>
+
+    </mat-select>
+
+  </mat-form-field>
